@@ -11,15 +11,15 @@ type ArticleCardProps = {
 
 const ArticleCard : FC<ArticleCardProps> = ({title, description, date, image}) => {
     return (
-        <div className=" w-980 h-260 border-r-20 bg-white transition-all duration-200 ease-out flex gap-9">
-            <div className=" inline-flex flex-col gap-30 items-start">
+        <div className=" flex md:flex-row flex-col flex-shrink-0 p-4 bg-white rounded-md gap-[16px] md:w-auto w-[343px] leading-relaxed hover:border-black">
+            <div className="flex flex-col lg:gap-[30px] items-start">
                 <div className="text-gray-500 text-center text-xs font-graphik leading-6 uppercase">
                     {date}
                 </div>
-                <div className="text-gray-800 text-2xl flex flex-col w-610 font-graphik font-semibold leading-relaxed">
+                <div className="text-gray-800 text-xl xl:w-[610px] md:w-[380px] font-graphik font-semibold leading-tight">
                     {title}
                 </div>
-                <div className="text-gray-600 text-lg font-graphik flex flex-col w-610 leading-relaxed">
+                <div className="text-gray-600 text-base font-graphik leading-relaxed">
                     {description}
                 </div>
             </div>
