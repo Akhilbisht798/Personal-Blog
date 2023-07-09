@@ -2,11 +2,12 @@ import { FC } from "react";
 import Image from "next/image";
 import HeroSection from "./home/HeroSection";
 
-type BlogType = {
+export type BlogType = {
   content: string;
   title: string;
   date: Date;
   image: string;
+  id?: string;
 };
 
 const Blog: FC<BlogType> = ({ content, title, date, image }) => {
