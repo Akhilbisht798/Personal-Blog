@@ -13,6 +13,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   // adapter: PrismaAdapter(prisma),
+  //TODO: Find a way for prisma to work with next auth using adapters.
 };
 
 const handler = NextAuth(authOptions);

@@ -16,6 +16,8 @@ const BlogSection: FC<BlogSectionType> = ({ articles }) => {
           date={article.date}
           description={article.description}
           image={article.image}
+          email={article.email}
+          published={article.published}
         />
       ))}
     </div>
