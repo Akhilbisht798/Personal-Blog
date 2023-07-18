@@ -2,24 +2,26 @@ import { FC } from "react";
 import Image from "next/image";
 import HeroSection from "./home/HeroSection";
 
-export type BlogType = {
+export interface BlogType {
   content: string;
   title: string;
   date: Date;
   image: string;
   id?: string;
-};
+}
 
 const Blog: FC<BlogType> = ({ content, title, date, image }) => {
   return (
     <>
       <HeroSection
         heading={title}
-        description={date.toLocaleDateString("en-US", {
-          month: "long",
-          day: "numeric",
-          year: "numeric",
-        })}
+        // description={date.toLocaleDateString("en-US", {
+        //   month: "long",
+        //   day: "numeric",
+        //   year: "numeric",
+        // })}
+        // description={date}
+        description="Hello"
       />
       <div className=" flex flex-col items-center justify-center gap-[10px] lg:px-[250px] lg:pb-[100px] md:px-[37px] md:pb-[80px] p-5  bg-white">
         <div className=" max-w-full h-auto rounded-md">

@@ -22,7 +22,6 @@ export async function POST(req: NextRequest) {
       },
     });
   } catch (error) {
-    console.log(error);
     return NextResponse.json({ message: error }, { status: 400 });
   }
 
@@ -33,11 +32,11 @@ export async function POST(req: NextRequest) {
 }
 
 export async function GET(req: NextRequest) {
-  console.log(req); //COMMENT: Work Around for api not calling for new data.
   try {
     const post = await prisma.post.findMany({});
     return NextResponse.json(post, { status: 200 });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(error);
   }
 }

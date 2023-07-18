@@ -16,6 +16,7 @@ export default function Navigation({
         </div>
       </div>
       {children}
+      {/* TODO: Add a footer as well. */}
     </>
   );
 }
