@@ -20,8 +20,7 @@ const Blog: FC<BlogType> = ({ content, title, date, image }) => {
         //   day: "numeric",
         //   year: "numeric",
         // })}
-        // description={date}
-        description="Hello"
+        description={date}
       />
       <div className=" flex flex-col items-center justify-center gap-[10px] lg:px-[250px] lg:pb-[100px] md:px-[37px] md:pb-[80px] p-5  bg-white">
         <div className=" max-w-full h-auto rounded-md">
